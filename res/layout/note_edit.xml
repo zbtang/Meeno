@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLay_outline"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffe8"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="27dip"
+        android:background="@drawable/title_bar" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLay_titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="23dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="73dip"
+            android:layout_height="23dip"
+            android:layout_gravity="right"
+            android:layout_marginLeft="27dip"
+            android:background="@drawable/timer"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/dateLinearLay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="135dip"
+                android:layout_height="29dip"
+                android:background="@drawable/date_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="2012年03月30日"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="87dip"
+                android:layout_height="29dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/time_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="15时53分"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/cancelTimer"
+                android:layout_width="21dip"
+                android:layout_height="19dip"
+                android:layout_marginLeft="17dip"
+                android:background="@drawable/cancel_timer" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView_editText"
+        android:layout_width="250dip"
+        android:layout_height="300dip"
+        android:layout_marginTop="13dip" >
+
+        <myUI.myEditText
+            android:id="@+id/editText_noteEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:background="@null"
+            android:gravity="top|left"
+            android:lineSpacingMultiplier="1.2"
+            android:linksClickable="false"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/deleteNoteBtn"
+            android:layout_width="49dip"
+            android:layout_height="24dip"
+            android:background="@drawable/delete_note" />
+
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:layout_width="48dip"
+            android:layout_height="23.4dip"
+            android:layout_marginLeft="18dip"
+            android:background="@drawable/save"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+</LinearLayout>

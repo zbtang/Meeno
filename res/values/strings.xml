@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Meeno</string>
+    <string name="note_link_tel">Call</string>
+    <string name="note_link_web">Browse web</string>
+    <string name="note_link_email">Send email</string>
+    <string name="note_link_other">Open map</string>
+
+</resources>

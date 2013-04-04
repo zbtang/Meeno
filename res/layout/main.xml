@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLay_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLay_titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="27dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar" >
+    </LinearLayout>
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLay_titleBar" >
+
+        <RelativeLayout
+            android:id="@+id/ralativeLay_tabhost"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ScrollView
+                android:id="@+id/scrollViewTab"
+                android:layout_width="60dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/tabwidget_bg"
+                android:fadeScrollbars="true"
+                android:scrollbarSize="0px"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/leftLinearLay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <myUI.myTabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="0dip" >
+                    </myUI.myTabWidget>
+
+                    <ImageButton
+                        android:id="@+id/addTab"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="1dip"
+                        android:background="@drawable/add_tab" />
+                </LinearLayout>
+            </ScrollView>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/scrollViewTab"
+                android:background="#f2efc0" >
+            </FrameLayout>
+        </RelativeLayout>
+    </TabHost>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayoutPopSms"
+    android:layout_width="267dip"
+    android:layout_height="220dip"
+    android:background="@drawable/pop_background" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/contactIcon"
+            android:layout_width="38dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="170dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="zhibintang"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="16dip"
+            android:layout_height="16dip"
+            android:layout_marginRight="12dip"
+            android:background="@drawable/delete"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/content_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:layout_below="@+id/linearLayout1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/smsContent"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:text="make a different"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/content_scroll"
+        android:layout_marginTop="3dip"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/smsReply"
+            android:layout_width="155dip"
+            android:layout_height="fill_parent"
+            android:background="@drawable/sms_reply"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/savaASnote"
+            android:layout_width="85dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8dip"
+            android:background="@drawable/save_as_note"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/content_scroll"
+        android:layout_marginTop="3dip"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/replyContent"
+            android:layout_width="155dip"
+            android:layout_height="fill_parent"
+            android:inputType="textAutoComplete|text" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/go"
+            android:layout_width="85dip"
+            android:layout_height="25dip"
+            android:layout_marginLeft="8dip"
+            android:background="@drawable/go"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+</RelativeLayout>
